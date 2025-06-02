@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0-rc.1](https://github.com/clspeter/release-please-prerelease-example/compare/v1.11.0-rc...v1.11.0-rc.1) (2025-06-02)
+
+
+### Miscellaneous Chores
+
+* test after a prerelease ([a7bfb36](https://github.com/clspeter/release-please-prerelease-example/commit/a7bfb36e38a01ef143099fdfff411b4389a51345))
+
 ## [1.11.0-rc](https://github.com/clspeter/release-please-prerelease-example/compare/v1.10.2...v1.11.0-rc) (2025-06-02)
 
 
