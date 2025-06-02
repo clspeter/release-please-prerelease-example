@@ -35,7 +35,7 @@ jobs:
           gh label create "autorelease: snapshot" -c D4C5F9 -d "release-please PR tagging - Ready for release" || true
           gh label create "autorelease: published" -c 0E8A16 -d "release-please PR tagging - Released" || true
 
-  # This job creates or finalizes a prerelease pull request or finalizes a release pull request
+  # This job creates or finalizes a prerelease pull request
   # and provides the necessary outputs for the subsequent jobs
   prerelease-prep:
     name: Create Prerelease Pull Request
@@ -64,9 +64,9 @@ jobs:
         run: |
           echo "Prerelease Tests"
 
-  # This job runs creates the Prerelease and creates a subsequent Release Pull Request
+  # This job creates the Prerelease (no longer creates Release PR)
   prerelease:
-    name: Create Prerelease and Release Pull Request
+    name: Create Prerelease
     runs-on: ubuntu-latest
     if: ${{ needs.prerelease-prep.outputs.releases_created == 'true' && contains(needs.prerelease-prep.outputs.tag_name, 'rc') }}
     needs: [ prerelease-prep ]
@@ -74,13 +74,6 @@ jobs:
       - name: Pre Release Step
         run: |
           echo "Running pre-release step!"
-
-      - name: Run release release-please
-        uses: googleapis/release-please-action@v4.2.0
-        with:
-          config-file: ".github/release-config.json"
-          manifest-file: ".github/release-manifest.json"
-          #token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
 
   # This job runs post-prerelease steps
   post-prerelease:
@@ -92,7 +85,7 @@ jobs:
         run: |
           echo "Running post-prerelease steps!"
 
-  # This job creates the final release and Syncs the prerelease manifest
+  # This job creates the final release
   release:
     name: Create Release
     runs-on: ubuntu-latest
