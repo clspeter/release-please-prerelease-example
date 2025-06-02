@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0-rc.4](https://github.com/clspeter/release-please-prerelease-example/compare/hotcake-app-staging@v1.11.0-rc.3...hotcake-app-staging@v1.11.0-rc.4) (2025-06-02)
+
+
+### 🔧 其他變更
+
+* a commit after staging ([ef7bbca](https://github.com/clspeter/release-please-prerelease-example/commit/ef7bbca77415c3b28e28c523507f800fc162ae38))
+
 ## [1.11.0-rc.3](https://github.com/clspeter/release-please-prerelease-example/compare/hotcake-app-staging@v1.11.0-rc.2...hotcake-app-staging@v1.11.0-rc.3) (2025-06-02)
 
 
