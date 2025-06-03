@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0-rc.3](https://github.com/clspeter/release-please-prerelease-example/compare/v1.11.0-rc.2...v1.11.0-rc.3) (2025-06-03)
+
+
+### 🔧 其他變更
+
+* test config ([2ffc27d](https://github.com/clspeter/release-please-prerelease-example/commit/2ffc27d3e2909c0b4cb943071a3601cea8a5b2db))
+
 ## [1.11.0-rc.2](https://github.com/clspeter/release-please-prerelease-example/compare/v1.11.0-rc.1...v1.11.0-rc.2) (2025-06-02)
 
 
